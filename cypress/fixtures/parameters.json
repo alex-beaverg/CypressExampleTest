@@ -1,0 +1,37 @@
+[
+    {
+        "testName": "Android Product Card test",
+        "dropMenuLocator": "i[class='icon-android'] + span",
+        "pageTitle": "Android OS"
+    },
+    {
+        "testName": "Apple Product Card test",
+        "dropMenuLocator": "i[class='icon-apple'] + span",
+        "pageTitle": "iOS operating system"
+    },
+    {
+        "testName": "Premium phones Product Card test",
+        "dropMenuLocator": "ul[class='drop-menu'] a[href*='premium'] > span",
+        "pageTitle": "Premium phones"
+    },
+    {
+        "testName": "Economic phones Product Card test",
+        "dropMenuLocator": "ul[class='drop-menu'] a[href*='economic'] > span",
+        "pageTitle": "Economic phones"
+    },
+    {
+        "testName": "Basic phones Product Card test",
+        "dropMenuLocator": "ul[class='drop-menu'] a[href*='basic'] > span",
+        "pageTitle": "Basic phones"
+    },
+    {
+        "testName": "Single SIM phones Product Card test",
+        "dropMenuLocator": "ul[class='drop-menu'] a[href*='single-sim'] > span",
+        "pageTitle": "Top 10 single SIM phones"
+    },
+    {
+        "testName": "Dual SIM phones Product Card test",
+        "dropMenuLocator": "ul[class='drop-menu'] a[href*='dual-sim'] > span",
+        "pageTitle": "Top 10 dual SIM phones"
+    }
+]

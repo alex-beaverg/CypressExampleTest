@@ -1,2 +1,6 @@
-# CypressExampleTest
-Cypress Example Test (06.2024)
+# Cypress Test Example
+
+---
+
+***© 2024 Alexey Bobrykov***
+
