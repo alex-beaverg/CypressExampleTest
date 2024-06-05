@@ -1,0 +1,12 @@
+[
+    {
+        "suiteName": "Mobile phones test suite",
+        "menuItemLocator": "nav[class='main-menu'] button[data-drop='catMainDropPanel']",
+        "suiteTag": "#mobile"
+    },
+    {
+        "suiteName": "Electronics test suite",
+        "menuItemLocator": "nav[class='main-menu'] button[data-drop='cat22DropPanel']",
+        "suiteTag": "#electronics"
+    }
+]

@@ -1,31 +1,39 @@
-let homeUrl = 'https://www.mobileshop.eu/'
-let checkProductPageText = 'Add to basket'
+const params = require('../fixtures/test_params.json')
 
-describe('mobileshop.eu tests', () => {
-  const params = require('../fixtures/mobile_phones_test_params.json')
-  const locators = require('../fixtures/mobile_phones_test_locators.json')
+describe('Mobileshop.eu Product tests', () => {
+  const checkProductPageText = 'Add to basket'
+  const suites = require('../fixtures/product_suites.json')
 
-  params.forEach((test) => {
-    it(test.testName, () => {
-      getHomePage()
-      cy.get(locators.menuItemLocator).should('exist').click({force: true})
-      cy.get(test.dropMenuItemLocator).should('exist').click({force: true})
-      cy.get(locators.pageTitleLocator).should('have.text', test.pageTitle)
-      cy.get(locators.productTitleLocator1).as('productTitleElement')
-      cy.get('@productTitleElement').invoke('text').then($title => {
-        cy.get(locators.productPriceLocator1).invoke('text').then($price => {
-          cy.get('@productTitleElement').should('exist').click({force: true})
-          cy.get(locators.addToBasketButtonLocator).should('have.text', checkProductPageText)
-          cy.get(locators.productPriceLocator2).invoke('text').should('eq', $price)
+  suites.forEach(suite => {
+    let tests
+    switch(suite.suiteTag) {
+      case '#mobile': tests = require('../fixtures/mobile_phones_tests.json')
+      case '#electronics': tests = require('../fixtures/electronics_tests.json')
+    }
+    describe(suite.suiteName, () => {
+      tests.forEach(test => {
+        it(test.testName, () => {
+          getHomePage()
+          cy.get(suite.menuItemLocator).should('exist').click({force: true})
+          cy.get(test.dropMenuItemLocator).should('exist').click({force: true})
+          cy.get(params.pageTitleLocator).should('have.text', test.pageTitle)
+          cy.get(params.productTitleLocator1).as('productTitleElement')
+          cy.get('@productTitleElement').invoke('text').then(title => {
+            cy.get(params.productPriceLocator1).invoke('text').then(price => {
+              cy.get('@productTitleElement').should('exist').click({force: true})
+              cy.get(params.addToBasketButtonLocator).should('have.text', checkProductPageText)
+              cy.get(params.productPriceLocator2).invoke('text').should('eq', price)
+            })
+            cy.get(params.productTitleLocator2).invoke('text').should('eq', title) 
+          })
         })
-        cy.get(locators.productTitleLocator2).invoke('text').should('eq', $title) 
       })
-    })
-  })  
+    })    
+  })
+})
 
-  function getHomePage() {
-    cy.visit(homeUrl)
-    cy.url().should('include', homeUrl)
-    cy.get(locators.privacyButtonLocator).wait(1000).should('exist').click({force: true})
-  }
-}) 
+function getHomePage() {
+  cy.visit(params.homeUrl)
+  cy.url().should('include', params.homeUrl)
+  cy.get(params.privacyButtonLocator).wait(1000).should('exist').click({force: true})
+}

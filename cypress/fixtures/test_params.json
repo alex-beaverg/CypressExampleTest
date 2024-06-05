@@ -1,6 +1,6 @@
 {
+    "homeUrl": "https://www.mobileshop.eu/",
     "privacyButtonLocator": "a[class='button db ghost']",
-    "menuItemLocator": "nav[class='main-menu'] button[data-drop='catMainDropPanel']",
     "pageTitleLocator": "header h1 > span",
     "productTitleLocator1": "div[class='product-wrap']:first-child div h5 a",
     "productPriceLocator1": "div[class='product-wrap']:first-child div div[class='price'] > div",

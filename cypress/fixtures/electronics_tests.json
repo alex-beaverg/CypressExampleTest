@@ -1,0 +1,47 @@
+[
+    {
+        "testName": "Tablet Product Card test",
+        "dropMenuItemLocator": "ul[class='drop-menu'] a[href*='tablets'] > span",
+        "pageTitle": "Tablets"
+    },
+    {
+        "testName": "Smartwatches Product Card test",
+        "dropMenuItemLocator": "ul[class='drop-menu'] a[href*='smartwatches'] > span",
+        "pageTitle": "Smartwatches"
+    },
+    {
+        "testName": "Home appliances Product Card test",
+        "dropMenuItemLocator": "ul[class='drop-menu'] a[href*='appliances'] > span",
+        "pageTitle": "Home appliances"
+    },
+    {
+        "testName": "Speakers Product Card test",
+        "dropMenuItemLocator": "ul[class='drop-menu'] a[href*='speakers'] > span",
+        "pageTitle": "Speakers"
+    },
+    {
+        "testName": "Laptops Product Card test",
+        "dropMenuItemLocator": "ul[class='drop-menu'] a[href*='laptops'] > span",
+        "pageTitle": "Laptops"
+    },
+    {
+        "testName": "Gaming console Product Card test",
+        "dropMenuItemLocator": "ul[class='drop-menu'] a[href*='console'] > span",
+        "pageTitle": "Gaming console"
+    },
+    {
+        "testName": "TV Product Card test",
+        "dropMenuItemLocator": "ul[class='drop-menu'] a[href*='tv'] > span",
+        "pageTitle": "TV"
+    },
+    {
+        "testName": "Vacuum cleaner Product Card test",
+        "dropMenuItemLocator": "ul[class='drop-menu'] a[href*='cleaner'] > span",
+        "pageTitle": "Vacuum cleaner"
+    },
+    {
+        "testName": "Computer Hardware Product Card test",
+        "dropMenuItemLocator": "ul[class='drop-menu'] a[href*='hardware'] > span",
+        "pageTitle": "Computer Hardware"
+    }
+]
