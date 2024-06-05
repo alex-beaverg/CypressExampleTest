@@ -1,5 +1,6 @@
 {
     "homeUrl": "https://www.mobileshop.eu/",
+    "checkProductPageText": "Add to basket",
     "privacyButtonLocator": "a[class='button db ghost']",
     "pageTitleLocator": "header h1 > span",
     "productTitleLocator1": "div[class='product-wrap']:first-child div h5 a",

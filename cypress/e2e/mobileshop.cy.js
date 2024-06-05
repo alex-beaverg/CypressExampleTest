@@ -1,7 +1,6 @@
 const params = require('../fixtures/test_params.json')
 
 describe('Mobileshop.eu Product tests', () => {
-  const checkProductPageText = 'Add to basket'
   const suites = require('../fixtures/product_suites.json')
 
   suites.forEach(suite => {
@@ -21,7 +20,7 @@ describe('Mobileshop.eu Product tests', () => {
           cy.get('@productTitleElement').invoke('text').then(title => {
             cy.get(params.productPriceLocator1).invoke('text').then(price => {
               cy.get('@productTitleElement').should('exist').click({force: true})
-              cy.get(params.addToBasketButtonLocator).should('have.text', checkProductPageText)
+              cy.get(params.addToBasketButtonLocator).should('have.text', params.checkProductPageText)
               cy.get(params.productPriceLocator2).invoke('text').should('eq', price)
             })
             cy.get(params.productTitleLocator2).invoke('text').should('eq', title) 
