@@ -1,4 +1,4 @@
-# Cypress Test Example
+# Cypress Example Test
 
 ---
 
