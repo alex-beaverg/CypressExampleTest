@@ -1,0 +1,10 @@
+{
+    "privacyButtonLocator": "a[class='button db ghost']",
+    "menuItemLocator": "nav[class='main-menu'] button[data-drop='catMainDropPanel']",
+    "pageTitleLocator": "header h1 > span",
+    "productTitleLocator1": "div[class='product-wrap']:first-child div h5 a",
+    "productPriceLocator1": "div[class='product-wrap']:first-child div div[class='price'] > div",
+    "addToBasketButtonLocator": "div[class='buttons'] > a:first-child > span",
+    "productTitleLocator2": "h1[class='product-name']",
+    "productPriceLocator2": "div[class='price-wrap'] > div[class='price']"
+}
