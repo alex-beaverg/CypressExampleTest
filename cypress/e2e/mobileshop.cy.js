@@ -3,15 +3,7 @@ const params = require('../fixtures/test_params.json');
 describe('Mobileshop.eu Product tests', () => {
   const suites = require('../fixtures/product_suites.json');
   suites.forEach(suite => {
-    let tests;
-    switch(suite.suiteTag) {
-      case '#mobile': 
-        tests = require('../fixtures/mobile_phones_tests.json');
-        break;
-      case '#electronics': 
-        tests = require('../fixtures/electronics_tests.json');
-        break;
-    }
+    let tests = getProductSuite(suite.suiteTag);
     context(suite.suiteName, () => {
       tests.forEach(test => {
         it(test.testName, () => {
@@ -41,3 +33,10 @@ beforeEach(() => {
   cy.url().should('include', params.homeUrl);
   cy.get(params.privacyButtonLocator).wait(1000).should('exist').click({force: true});
 })
+
+function getProductSuite(suiteTag) {
+  switch(suiteTag) {
+    case '#mobile': return require('../fixtures/mobile_phones_tests.json');
+    case '#electronics': return require('../fixtures/electronics_tests.json');
+  }
+}
