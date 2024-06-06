@@ -40,8 +40,8 @@
         "pageTitle": "Vacuum cleaner"
     },
     {
-        "testName": "Computer Hardware Product Card test",
+        "testName": "Computer hardware Product Card test",
         "dropMenuItemLocator": "ul[class='drop-menu'] a[href*='hardware'] > span",
-        "pageTitle": "Computer Hardware"
+        "pageTitle": "Computer hardware"
     }
 ]
