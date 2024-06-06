@@ -2,9 +2,9 @@ const params = require('../fixtures/test_params.json');
 
 describe('Mobileshop.eu Product tests', () => {
   const suites = require('../fixtures/product_suites.json');
-  suites.forEach(suite => {
-    let tests = getProductSuite(suite.suiteTag);
+  suites.forEach(suite => {    
     context(suite.suiteName, () => {
+      let tests = getProductSuite(suite.suiteTag);
       tests.forEach(test => {
         it(test.testName, () => {
           cy.log('Test "' + test.testName + '" was started!');
