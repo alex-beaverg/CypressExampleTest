@@ -7,5 +7,11 @@
     "productPriceLocator1": "div[class='product-wrap']:first-child div div[class='price'] > div",
     "addToBasketButtonLocator": "div[class='buttons'] > a:first-child > span",
     "productTitleLocator2": "h1[class='product-name']",
-    "productPriceLocator2": "div[class='price-wrap'] > div[class='price']"
+    "productPriceLocator2": "div[class='price-wrap'] > div[class='price']",
+
+    "loginButtonLocator": "nav[class='top-menu'] button[data-drop='loginDropPanel']",
+    "emailTextFieldLocator": "input[id='loginEmail']",
+    "passTextFieldLocator": "input[id='loginPass']",
+    "submitLoginButtonLocator": "a[href*='login']",
+    "logoutButton": "a[href*='logout']"
 }

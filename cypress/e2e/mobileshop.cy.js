@@ -27,6 +27,28 @@ describe('Mobileshop.eu Product tests', () => {
   })
 })
 
+describe('Mobileshop.eu Login tests', () => {
+  const tests = require('../fixtures/login_tests.json');
+  tests.forEach(test => {
+    it(test.testName, () => {
+      cy.log('Test "' + test.testName + '" was started!');
+      cy.get(params.loginButtonLocator).should('exist').click({force: true});
+      cy.get(params.emailTextFieldLocator).should('exist').type(test.login);
+      cy.get(params.passTextFieldLocator).should('exist').type(test.password);
+      cy.get(params.submitLoginButtonLocator).should('exist').click({force: true});
+      if (test.testName.includes('Valid')) {
+        cy.get(params.logoutButton).should('exist');
+      } else if (test.testName.includes('Invalid')) {
+        cy.get(params.logoutButton).should('not.exist');
+      } else {
+        cy.get(params.logoutButton).should('exist').click({force: true});
+        cy.url().should('include', params.homeUrl);
+      }
+      cy.log('Test "' + test.testName + '" was finished!');
+    })
+  })
+})
+
 beforeEach(() => {
   cy.log('Opening Home Page...');
   cy.visit(params.homeUrl);
